@@ -1,0 +1,46 @@
+Most guys don’t realize that every time they give in, they’re losing more than just a few minutes. They’re losing their energy, their confidence, their focus, their future. Imagine how much stronger, sharper, and more confident you’d feel if you broke free today.
+
+
+
+Virtual Network Appliance perform WAN Optimization
+
+$Subnet=New-AzVirtualNetworkSubnetConfig -Name default -AddressPrefix 10.0.0.0/24
+ New-AzVirtualNetwork -Name myVnet -ResourceGroupName dumpstersandox-Location $Location -AddressPrefix 10.0.0.0/16 -Subnet $Subnet
+
+az vm create --resource-group "dumpstersandox" --name "dataProcStage1" --vnet-name "assignment2" --subnet "default" --image "Win2016Datacenter" --location "indiasouth" --size "Standard_DS2_v2" --public-ip-address "dataProcStage1"
+
+Each VNET can have only one VPN Gateway
+Gateway Subnet -- contains Routing Tables
+
+VPN gateway, there are three architectures to consider:
+
+Point to site over the internet
+Site to site over the internet
+Site to site over a dedicated network, such as Azure ExpressRoute
+SSTP, IPSec, Expressroute  
+
+Study Topics
+
+
+https://storageaccountname.blob.core.windows.net/container/blob?SAS
+
+1) az vm create --name web-app-vm --resource-group web-app-rg --location eastus --image Ubuntu2204 --generate-ssh-keys --public-ip-sku Standard --public-ipaddress-allocation static
+
+inbound connections are not allowed, check NIC, NSG 
+
+az network nsg create --name webapp-nsg --resource-group web-app-rg --location eastus
+
+2) StandardV2 storage account with cold access tier
+
+ az storage account --name reportsstorage .... with GRS
+
+ Used Capacity>100GB Metric
+
+3) Block all outgoing traffic with priority 10000
+allow access to 192.168.10.5 on port 3306. with priority 500
+
+Azure firewall allows you to enforce policy at Vnet level whereas nsg only allows at subnet level
+
+Create an application rule in firewall that allows *.microsoft.com
+
+az vm create --name VMname --resource-group RGname 
